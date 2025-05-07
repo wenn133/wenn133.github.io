@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Greeting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Confetti Background -->
+  <div id="confetti-container"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-bar"><div class="progress"></div></div>
+    <p id="loading-text">Hello Pangga!</p>
+  </div>
+<!-- Celebrate Panel (Hidden Initially) -->
+<div id="celebrate-panel" class="panel hidden">
+  <div class="celebrate-content">
+    <h2>🎉 Celebrate it with me! 🎉
+      - tomorrow before lunchhhh
+    </h2>
+    
+    <button class="back-button" onclick="goBackCelebrate()">Back</button>
+  </div>
+</div>
+
+  <!-- Main Container -->
+  <main class="container">
+    <h1>🎉 Happy Birthday Mi Mau! 🎂</h1>
+    <div class="button-group">
+      <button onclick="showMessage()" aria-label="Open Message">📩 Open Message</button>
+      <button onclick="showGallery()" aria-label="View Gallery">🖼️ View Gallery</button>
+      <button onclick="showMusic()" aria-label="Voice Message">🎶 FOR YOU</button>
+      <button onclick="triggerCelebrate()">🎉 Celebrate!</button>
+
+    </div>
+  </main>
+
+  <!-- Content Panel -->
+  <div id="panel-window" class="panel hidden">
+    <div id="contentArea"></div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <!-- Music Indicator -->
+  <div id="music-indicator" class="music-indicator hidden">🎵 Music Playing</div>
+
+  <!-- Audio -->
+  <audio id="button-sound" src="Happy Birthday To You.mp3"></audio>
+  <audio id="voice-message" src="VM.aac" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
